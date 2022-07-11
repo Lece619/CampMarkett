@@ -34,6 +34,7 @@ public class MemberController {
 		String email = vo.getEmail();
 		session.setAttribute("wannaName", name);
 		session.setAttribute("wannaEmail", email);
+		//로그인 필요
 		return "join/term";
 	}
 	
