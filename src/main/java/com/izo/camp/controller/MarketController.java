@@ -169,12 +169,6 @@ public class MarketController {
 	}
 	
 	//주문완료 ! 
-	//주문완료 페이지를 Redirection 으로 막았어야한다.
-	//이후 주문완료페이지에서 새로고침시 요청이 다시 들어간다.
-	//지금 작동으로는 문제가 되지않음 => 장바구니 DB에서 직접 조회를 해서 꺼내는 작업을 진행했음
-	//하지만 addMoneyService.minusPoint(addMoneyVO) 쿼리가 계속해서 반복되서 실행될 것임.
-	//물론 addMoneyVO에 TotalMoney는 변경이 없음 그렇지만 내역이 계속해서 변함없고 똑같은 형태로 DB에 저장 될 것.
-	//다음에 짤때에는 redirection으로 페이지를 이동시키는게 제일 합리적임.
 	@RequestMapping("orderOk")
 	public String orderOk(Model model) {
 		//구매 관련 DB 수정 구현
