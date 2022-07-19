@@ -433,8 +433,6 @@
 			var json = (new Function('return'+data))();
 			if(json[0].param=='y'){
 				alert("비밀번호가 정상적으로 변경되었습니다");
-	/* 			document.getElementById('loginField').style.display = 'block';
-				document.getElementById('pwdField2').style.display = 'none'; */
 				$('#pwd11').attr('disabled', true);
 				$('#pwd22').attr('disabled', true);
 			}else{
