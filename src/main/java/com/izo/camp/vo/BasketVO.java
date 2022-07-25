@@ -3,7 +3,7 @@ package com.izo.camp.vo;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-@Repository
+//@Repository 빈으로 등록을 하지 않아도 될것
 public class BasketVO {
 //	idx number(6) PRIMARY KEY,
 //	memberID VARCHAR2(50),
