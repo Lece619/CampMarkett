@@ -10,3 +10,13 @@ https://drive.google.com/file/d/1MCkRVwfvdGbxB-klp0WNgBG2Z2H3_rzW/view?usp=shari
 
 
 <img width="387" alt="관계도" src="https://user-images.githubusercontent.com/25758530/177303549-b438ab51-fc50-4ebc-b4fe-63f751af72f7.PNG">
+
+
+## 보충되어야 할 점!
+
+1. 주문완료 페이지에 redirection으로 재주문되는것을 막기 ( 현재에도 막혀있긴함 - DB를 조회하는 방식이기 때문 ) 
+   현재 코드도 막혀있긴하지만 실제 주문이 안들어가는것이 아닌 빈 주문이 들어가는 형식 - redirect: 주문완료페이지?오더 번호 로 리다이렉션하기
+   
+2. VO 객체에 대한 빈 등록을 사용하지 않아도 괜찮다.
+
+3. 모든 빈에 대하여 의존관계 주입이 필드 주입으로 이뤄져 있어서 단위 테스트 실행에 문제가 크고, 무슨 의존관계가 주입되는지 명확하게 파악하기 힘들다. 
