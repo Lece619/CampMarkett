@@ -116,7 +116,9 @@ public class CampingAreaController {
 		
 		
 		
-		//페이징 처리
+		//페이징 처리 -- > 우선 데이터가 한번 필터링 되어있기 때문에 걸러진 데이터를 전부 가져온 상태에서 페이징할 숫자를 가져온것. 
+		// 쿼리를 조금더 효과적으로 사용하게 된다면 SQL쿼리를 날릴때 페이징될 순서로 가져오는 것이 좋을 수 있다. 지금은 데이터가 적기 때문에 가능한 일
+		
 		
 		int last = (page * 10) > list.size() ? list.size() : (page * 10);
 		int maxPage = (list.size() + 9) / 10; 
