@@ -29,8 +29,14 @@ public class HomeController {
 	CampInfoService campInfoService;
 	@Autowired
 	DeptMapper deptMapper;
+	
+	//Session을 사용할때 필드주입이 가능한가 ? (프로젝트시 의문 )
+	/* 의문점 해결
+	Session을 자동주입 받는다고 싱글톤으로 session이 생성되거나 하지 않는다. 
+	스프링 컨테이너가 동적 생성 프록시로 Session 인스턴스를 생성하고 사용하는데 이때 스코프가 Session이기 때문에 웹요청시마다 생성된다.
+	*/
 	@Autowired
-    private HttpSession session;
+	private HttpSession session;
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
