@@ -41,6 +41,11 @@ public class CampInfoService {
 		}
 	}
 	
+	/*
+		22.08.27 JSONParser 와 Rest API 사용에 대해 .
+		RestAPI를 사용해서 받아오는 ResponseBody를 HTTP컨버터가 작동하게 해서 사용하면 편리할것. 
+		나의 애플리케이션에서 다른 오픈 RestAPI를 요청하는 방법에 대해 찾아 봐야 한다.
+	*/
 	//테이블이 비어있다면 이 테이블을 채워 넣어준다. 
 	//JSON -> 테이블 만들기
 	public void insertInfo() {
